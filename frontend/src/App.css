@@ -33,6 +33,16 @@
   color: #f88;
 }
 
+.banner.warning {
+  background: rgba(200, 150, 50, 0.2);
+  color: #e8c040;
+}
+
+.banner.sludge {
+  background: rgba(100, 100, 140, 0.2);
+  color: #a0a0dd;
+}
+
 .banner code {
   font-size: 0.9em;
 }
@@ -61,13 +71,26 @@
 .fuel-gauge.moderate .gauge-fill { background: #c9a227; }
 .fuel-gauge.critical .gauge-fill { background: #c94a47; }
 
+.gauge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.gauge-row + .gauge-row { margin-top: 0.5rem; }
+.gauge-sublabel { font-size: 0.8rem; color: #777; }
+
+.fuel-row .gauge-visual { flex: 1; }
+.fuel-gauge-bar .gauge-fill.fuel-fill { background: #2d7a9e; }
+
 .gauge-visual {
   position: relative;
   height: 32px;
   background: #2a2a2a;
   border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
+  flex: 1;
 }
 
 .gauge-fill {
@@ -187,3 +210,56 @@
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+.recalibrate-btn, .grayscale-btn, .config-btn {
+  padding: 0.5rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #2a2a2a;
+  color: #e8e6e3;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.recovery, .sunburn, .todos-section, .postmortem {
+  padding: 1rem;
+  background: #1a1a1a;
+  border-radius: 8px;
+  border: 1px solid #2a2a2a;
+}
+
+.recovery h3, .sunburn h3, .todos-section h3, .postmortem h3 {
+  font-size: 0.95rem;
+  color: #bbb;
+  margin-bottom: 0.75rem;
+}
+
+.recovery ul { list-style: none; }
+.prescription { padding: 0.5rem 0; font-size: 0.9rem; color: #ccc; }
+.prescription-ok { color: #6a9; }
+
+.sunburn p { font-size: 0.9rem; color: #ccc; }
+.sunburn-meta { font-size: 0.8rem; color: #777; }
+
+.todo-form { display: flex; gap: 0.5rem; margin-bottom: 0.75rem; }
+.todo-input { flex: 1; padding: 0.5rem; border-radius: 6px; background: #2a2a2a; border: 1px solid #444; color: #e8e6e3; }
+.todo-add { padding: 0.5rem 1rem; border-radius: 6px; background: #333; color: #fff; cursor: pointer; border: none; }
+.todo-list { list-style: none; }
+.todo-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0; }
+.todo-item input[type="checkbox"] { cursor: pointer; }
+.todo-delete { background: none; border: none; color: #888; cursor: pointer; font-size: 1.2rem; padding: 0 0.3rem; }
+.todo-delete:hover { color: #c66; }
+
+.postmortem-table { font-size: 0.85rem; }
+.postmortem-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0.5rem; padding: 0.4rem 0; }
+.postmortem-row.header { color: #777; font-weight: 600; }
+
+.config-panel { padding: 1rem; background: #1a1a1a; border-radius: 8px; margin-top: 1rem; }
+.config-panel h4 { font-size: 0.9rem; color: #888; margin: 0.75rem 0 0.3rem; }
+.config-panel input, .config-panel select, .config-panel textarea { width: 100%; max-width: 400px; padding: 0.5rem; background: #2a2a2a; border: 1px solid #444; color: #e8e6e3; border-radius: 6px; font-family: inherit; }
+.config-panel textarea.config-overrides { font-size: 0.85rem; resize: vertical; min-height: 60px; }
+.config-hint { font-size: 0.8rem; color: #777; margin: 0.2rem 0 0.5rem; }
+
+.grayscale-btn.on { background: #2d7a9e; border-color: #3d8aae; }
+.time-badge { font-size: 0.8rem; color: #c9a227; margin-left: 0.3rem; }
