@@ -1,0 +1,6 @@
+# AURA Backend - Privacy-First Desktop Monitor
+flask>=3.0.0
+flask-cors>=4.0.0
+pynput>=1.7.6
+pywinctl>=0.0.55
+duckdb>=0.9.0

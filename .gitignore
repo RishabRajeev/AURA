@@ -1,0 +1,29 @@
+# Python
+venv/
+.env
+*.pyc
+__pycache__/
+*.egg-info/
+.eggs/
+
+# Node
+node_modules/
+
+# Local data (privacy)
+.aura/
+*.duckdb
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+build/
+*.log
